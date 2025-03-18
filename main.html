@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <title> BUSINESS VALUATIONS</title>
+
+</head>
+<body>
+
+    <video autoplay muted loop id="background-video">
+        <source src="854336-hd_1920_1080_24fps.mp4" type="video/mp4">
+    </video>
+    
+
+    <header>
+        <div class = "head-container">
+            <nav>
+                <h1>HOW VALUABLE IS YOUR BUSINESS ?</h1>
+                <h3>Find out now.</h3>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container">
+    <section>
+        <h3> Enter in the top line revenues of the company for the applicable year. For the most current year, enter in your best estimate of the financial performance for year end. </h3>
+        <form class = "sales"> 
+            
+                <input type="number" id="2024-sales" name="2024-sales" placeholder="2024 SALES..."> 
+                <input type="number" id="2023-sales" name="2023-sales" placeholder="2023 SALES..."> 
+                <input type="number" id="2022-sales" name="2022-sales" placeholder="2022 SALES..."> 
+        </form>
+    </section>
+
+    <section>
+        <h3> Enter in your cost of goods sold: </h3>
+        <form class = "cogs"> 
+            
+                <input type="number" id="2024-cogs" name="2024-cogs" placeholder="2024 Cost of Goods Sold..."> 
+                <input type="number" id="2023-cogs" name="2023-cogs" placeholder="2023 Cost of Goods Sold..."> 
+                <input type="number" id="2022-cogs" name="2023-cogs" placeholder="2022 Cost of Goods Sold..."> 
+        
+        </form>
+    </section>
+
+    <section>
+        <h3> Discretionary owner expenses (addbacks, interest, salaries, etc.)  </h3>
+        <form class = "Other Expenses"> 
+                <input type="number" id="2024-oex" name="2024-oex" placeholder="2024 Other Expenses..."> 
+                <input type="number" id="2023-oex" name="2023-oex" placeholder="2023 Other Expenses..."> 
+                <input type="number" id="2022-oex" name="2022-oex" placeholder="2022 Other Expenses..."> 
+        </form>
+    </section>
+
+    <section>
+        <h2> Choose Industry</h2>
+        <div class = "industry">
+            <select id="businessType" name="businessType" class="searchable-dropdown">
+                <option value="Choose">Select Industry....</option>
+                <option value="Agricuture">Agricuture</option>
+                <option value="Mining">Mining</option>
+                <option value="General Contractors (Construction)"> General Contractors</option>
+                <option value="Construction-Special Building Trades">Construction-Special Building Trades</option>
+                <option value="Food(Manufaturing)">Food (Manufacturing)</option>
+                <option value="Textile">Textile (Manufacturing)</option>
+                <option value="Apparel">Apparel (Manufacturing)</option>
+                <option value="Lumber/Wood"> Lumber/Wood </option>
+                <option value="Furniture">  Furniture</option>
+                <option value="Paper">Paper</option>
+                <option value="Printing">Printing</option>
+                <option value="Chemicals">Chemicals</option>
+                <option value="Rubber and Plastics"> Rubber and Plastics</option>
+                <option value="Leather"> Leather</option>
+                <option value="Stone"> Stone</option>
+                <option value="Metal Primary">Metal Primary</option>
+                <option value="Metal Fabrication"> Metal Fabrication</option>
+                <option value="Industrial Machinery"> Industrial Machinery </option>
+                <option value="Electrical and Electronincs"> Electrical/Electronics</option>
+                <option value="Transportation">Transportation </option>
+                <option value="Transportation(Manufacturing)">Transportation (Manufacturing) </option>
+                <option value="Instruments">Instruments</option>
+                <option value="Other Manufacturing">Other Manufacturing</option>
+                <option value="Wholesale (Durable Goods)"> Wholesale (Durable Goods)</option>
+                <option value="Wholesale-Non-Durable-Goods">Wholesale(Non-Durable Goods)</option>
+                <option value="Building Materials">Building Materials, Hardware, Garden</option>
+                <option value="General Merchandise">General Merchandise</option>
+                <option value="Food(Retail)">Food(Retail)</option>
+                <option value="Auto Dealers & Gas Stations">Auto Dealers & Gas Stations</option>
+                <option value="Apparel & Accessories">Apparel & Accessories </option>
+                <option value="Furniture Home Furnishing"> Furniture and Home Furnishing</option>
+                <option value="Eating and Drinking Place"> Eating and Drinking place</option>
+                <option value="Other Retail">Other Retail</option>
+                <option value="Hotels Lodging"> Hotels Lodging</option>
+                <option value="Personal Services"> Persoanl Services</option>
+                <option value="Business Services">Business Services</option>
+                <option value="Automotive Services">Automotive Services</option>
+                <option value="Miscellaneous Repair">Miscellaneous Repair</option>
+                <option value="Motion Pictures">Motion Pictures</option>
+                <option value="Amusement">Amusement</option>
+                <option value="Health">Health</option>
+                <option value="Legal">Legal</option>
+                <option value="Educational">Educational</option>
+                <option value="Social">Social</option>
+                <option value="Engineering/Management Consulting"> Engineering/Management Consulting</option>
+                <option value="Miscellaneous Services"> Miscellaneous Services</option>
+
+
+            </select>
+        </div>
+    </section>
+
+    <section>
+        <button onclick="calculateValuation()">Calculate Net Score</button>
+        <div id="results-section" style="margin-top: 30px; display: none;">
+              <h2>📊 Results :</h2>
+              <div class="result-box" id="valuationMessage"></div>
+            </div>
+        </div>
+      </section>
+    </main>
+</div>
+
+      <div style="height: 10vh;"></div>
+      <p><strong>Disclaimer:</strong> The valuation results provided are for informational purposes only and are based on simplified calculations and assumed multipliers. They do not constitute financial, investment, or business advice. Actual company value may vary significantly due to numerous market and operational factors.</p>
+    
+
+      <footer>
+        <div class = "footer-container">
+            <div>
+                <h3>CONTACT US FOR A REAL AND IN DEPTH EVALUATION OF YOUR COMPANY: </h3>
+                <a href = "mailto:info@kodiakvaluations.com"  class = "footer-contactus">Contact US</a>
+            
+            </div>
+
+
+        </div>
+    </footer>
+    
+
+      <script src="kodiak.js"></script>
+
+</body>
+</html>
