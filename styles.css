@@ -1,0 +1,201 @@
+.result-box {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;/* Keeps the video in the background */
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: white;
+  text-align: center;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+  background-image: url('pexels-danielabsi-952670.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+nav h1 {
+  color: white;
+  margin: 0;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.8);;
+  text-align: center;
+  padding: 1.5rem;
+  z-index: 1;
+  font-family: "Georgia", "Times New Roman", Times, serif;
+
+
+}
+
+.head-container {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  padding: 0.5rem;
+  font-family: "Georgia", "Times New Roman", Times, serif;
+}
+
+input[type="number"] {
+  padding: 10px 14px;
+  margin: 8px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 250px;
+  box-sizing: border-box;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+}
+
+/* Style the dropdown */
+.searchable-dropdown {
+  width: 280px;                  /* Adjust width */
+  padding: 10px 14px;            /* Soft padding */
+  border-radius: 8px;            /* Rounded corners */
+  border: 1px solid #ccc;        /* Light border */
+  font-size: 14px;               /* Readable text */
+  background-color: white;       /* Clean white background */
+  color: #333;                   /* Dark text for contrast */
+  cursor: pointer;               /* Pointer on hover */
+  appearance: none;              /* Removes default dropdown arrow (for custom icons) */
+}
+
+/* Add hover effect */
+.searchable-dropdown:hover {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+}
+
+/* Style the dropdown when clicked */
+.searchable-dropdown:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 8px rgba(0, 86, 179, 0.5);
+}
+
+/* Add a down arrow icon (optional, for better visuals) */
+.searchable-dropdown::after {
+  content: "\25BC"; /* Unicode for downward arrow */
+  font-size: 12px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+button {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Optional: Hover effect */
+button:hover {
+  background-color: #333; /* Slightly lighter black */
+  color: rgb(255, 30, 0);
+
+}
+
+.main-container {
+  max-width: 1150px;
+  margin: 50px auto;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+  color: #fff; /* optional: make text white for contrast */
+}
+
+.footer-contactus:hover{
+  color: rgb(255, 5, 5);
+
+}
+
+#userForm {
+  background-color: rgba(0, 0, 0, 0.6); /* Dark transparent background */
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+#userForm input,
+#userForm textarea {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #000;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+#userForm input:focus,
+#userForm textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+}
+
+#userForm button {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#userForm button:hover {
+  background-color: #333;
+  color: rgb(255, 30, 0);
+}
+
+#form-status {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #00ffcc;
+  text-shadow: 0 0 5px rgba(0, 255, 204, 0.5);
+}
