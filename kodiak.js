@@ -6,18 +6,17 @@ function calculateValuation() {
       parseFloat(document.getElementById('2022-sales').value) || 0
     ];
     
-    const otherExpenses = [
+    const Earnings = [
       parseFloat(document.getElementById('2024-oex').value) || 0,
       parseFloat(document.getElementById('2023-oex').value) || 0,
       parseFloat(document.getElementById('2022-oex').value) || 0
     ];
 
     // Calculate totals
-    const totalSales = sales.reduce((a, b) => a + b, 0);
-    const totalExpenses = otherExpenses.reduce((a, b) => a + b, 0);
+    const total = Earnings.reduce((a, b) => a + b, 0);
 
     // Net Score
-    const netScore = (totalSales/3) - (totalExpenses/3);
+    const netScore = (total/3);
     const netBy2 = netScore * 2;
     const netBy3_6 = netScore * 3.6;
     // Display results
@@ -27,8 +26,30 @@ function calculateValuation() {
 
     document.getElementById('results-section').style.display = 'block';
     document.getElementById('valuationMessage').textContent = ` Your company could be worth approximately ${formatted2x} to ${formatted3_6x}`;
-    
 
+    window._valuationResults = {
+      valuation_range: `${formatted2x} to ${formatted3_6x}`,
+      avg_earnings: netScore.toFixed(2)
+    };
+
+    const form = document.forms["userForm"];
+
+    const parms = {
+      name: form["name"].value,
+      email: form["email"].value,
+      phone: form["phone"].value,
+      businessname: form["businessname"].value,
+      message: form["message"].value,
+      valuation_range: window._valuationResults?.valuation_range || 'N/A',
+      avg_earnings: window._valuationResults?.avg_earnings || 'N/A'
+    };
+
+    emailjs.send('service_21pfc9q', 'template_hj3lccf', parms)
+      .then(() => alert("✅ Email sent to company!"))
+      .catch(error => {
+        console.error("❌ Email send error:", error);
+        alert("Email failed to send.");
+      });
   }
 
   
