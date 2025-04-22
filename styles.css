@@ -27,26 +27,24 @@ body, html {
   color: white;
   text-align: center;
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-
-  background-image: url('pexels-danielabsi-952670.jpg');
-  background-size: cover;
+  background: linear-gradient(to bottom, #0c0c0c, #4b4949);  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 nav h1 {
   color: white;
-  margin: 0;
 }
 
 nav {
-  background-color: rgba(0, 0, 0, 0.8);;
+  background-color: black;
   text-align: center;
-  padding: 1.5rem;
+  padding: 0.1rem;
   z-index: 1;
-  font-family: "Georgia", "Times New Roman", Times, serif;
-
-
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .head-container {
@@ -64,8 +62,8 @@ input[type="number"] {
   margin: 8px;
   border-radius: 10px;
   border: 1px solid #ccc;
-  font-size: 16px;
-  width: 250px;
+  font-size: 10px;
+  width: 200px;
   box-sizing: border-box;
 }
 
@@ -81,7 +79,7 @@ input[type="number"]:focus {
   padding: 10px 14px;            /* Soft padding */
   border-radius: 8px;            /* Rounded corners */
   border: 1px solid #ccc;        /* Light border */
-  font-size: 14px;               /* Readable text */
+  font-size: 10px;               /* Readable text */
   background-color: white;       /* Clean white background */
   color: #333;                   /* Dark text for contrast */
   cursor: pointer;               /* Pointer on hover */
@@ -131,13 +129,16 @@ button:hover {
 }
 
 .main-container {
-  max-width: 1150px;
+  max-width: 75%;
   margin: 50px auto;
   background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 1);
   color: #fff; /* optional: make text white for contrast */
+  position: relative;
+  top: 110px; /* moves it down by 50px */
+
 }
 
 .footer-contactus:hover{
