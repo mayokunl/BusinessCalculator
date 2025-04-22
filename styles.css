@@ -4,9 +4,9 @@
     font-size: 18px;
   }
   button {
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
   }
   
@@ -62,7 +62,7 @@ input[type="number"] {
   margin: 8px;
   border-radius: 10px;
   border: 1px solid #ccc;
-  font-size: 10px;
+  font-size: 12px;
   width: 200px;
   box-sizing: border-box;
 }
@@ -116,9 +116,10 @@ button {
   padding: 12px 20px;
   border: none;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  height: 40px;
 }
 
 /* Optional: Hover effect */
@@ -131,14 +132,13 @@ button:hover {
 .main-container {
   max-width: 75%;
   margin: 50px auto;
-  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 1);
-  color: #fff; /* optional: make text white for contrast */
+  color: #fff; 
   position: relative;
-  top: 110px; /* moves it down by 50px */
-
+  top: 110px; 
 }
 
 .footer-contactus:hover{
@@ -147,7 +147,7 @@ button:hover {
 }
 
 #userForm {
-  background-color: rgba(0, 0, 0, 0.6); /* Dark transparent background */
+  background-color: rgba(0, 0, 0, 0.6); 
   padding: 30px;
   border-radius: 15px;
   max-width: 600px;
@@ -162,7 +162,7 @@ button:hover {
   margin: 10px 0;
   border-radius: 10px;
   border: 1px solid #ccc;
-  font-size: 16px;
+  font-size: 12px;
   box-sizing: border-box;
   background-color: #fff;
   color: #000;
@@ -182,7 +182,7 @@ button:hover {
   padding: 12px 20px;
   border: none;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 12px;
   cursor: pointer;
   margin-top: 15px;
   transition: background-color 0.3s ease, color 0.3s ease;

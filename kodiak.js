@@ -45,10 +45,9 @@ function calculateValuation() {
     };
 
     emailjs.send('service_21pfc9q', 'template_hj3lccf', parms)
-      .then(() => alert("✅ Email sent to company!"))
       .catch(error => {
         console.error("❌ Email send error:", error);
-        alert("Email failed to send.");
+        
       });
   }
 
