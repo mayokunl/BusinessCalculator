@@ -27,7 +27,7 @@ body, html {
   color: white;
   text-align: center;
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  background: linear-gradient(to bottom, #0c0c0c, #4b4949);  background-size: cover;
+  background: linear-gradient(to bottom, #060606, #646363);  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
